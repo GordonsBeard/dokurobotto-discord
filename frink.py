@@ -1,3 +1,4 @@
+from discord import Embed
 import frinkiac
 
 # Frinkiac / Simpsons Search
@@ -13,10 +14,14 @@ async def action(message, client):
     message.content = message.content.lower()
     if message.content == "!simp":
         random_screen = frinkiac.random()
-        await client.send_message(message.channel, random_screen.meme_url())
+        embed_message = Embed(type = 'rich')
+        embed_message.set_image(url = random_screen.meme_url())
+        await client.send_message(message.channel, embed = embed_message)
     elif message.content == "!fut":
         random_screen = frinkiac.random(False)
-        await client.send_message(message.channel, random_screen.meme_url())
+        embed_message = Embed(type = 'rich')
+        embed_message.set_image(url = random_screen.meme_url())
+        await client.send_message(message.channel, embed = embed_message)
     else:
         try:
             if message.content.startswith("!simp"):
@@ -27,8 +32,12 @@ async def action(message, client):
                 search = frinkiac.search(query, False)
             if search:
                 if query.startswith('"') and query.endswith('"'):
-                    await client.send_message(message.channel, search[0].meme_url(caption = query.split('"')[1]))
+                    embed_message = Embed(type = 'rich')
+                    embed_message.set_image(url = search[0].meme_url(caption = query.split('"')[1]))
+                    await client.send_message(message.channel, embed = embed_message)
                 else:
-                    await client.send_message(message.channel, search[0].meme_url())
+                    embed_message = Embed(type = 'rich')
+                    embed_message.set_image(url = search[0].meme_url())
+                    await client.send_message(message.channel, embed = embed_message)
         except ValueError:
             await client.add_reaction(message, '?')
