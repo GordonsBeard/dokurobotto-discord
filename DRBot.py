@@ -5,7 +5,7 @@ import re
 import requests
 import frinkiac
 
-from config import key as client_key
+from config import client_key, mashape_key
 from discord import Emoji
 
 client = discord.Client()
@@ -98,7 +98,7 @@ async def on_message(message):
 
 def hearthstone_card_search(q):
     url = "https://omgvamp-hearthstone-v1.p.mashape.com/cards/search/{0}"
-    headers={"X-Mashape-Key": "xNq3M7EO99msht1Kh2Bv26QRkDcSp1gD0Q8jsniTmOabV665Bf"}
+    headers={"X-Mashape-Key": mashape_key}
     response = requests.get(url.format(q), headers=headers)
     dictionary = response.json()
     if 'message' in dictionary:
