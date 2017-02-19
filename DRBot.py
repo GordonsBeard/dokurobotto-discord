@@ -1,8 +1,8 @@
 import discord
 from discord.ext import commands
 
-import snooplinks
-plugins_list = [ snooplinks, ]
+import snooplinks, hearthstone, frink
+plugins_list = [ snooplinks, frink, hearthstone ]
 
 from config import client_key
 client = discord.Client()
@@ -16,6 +16,7 @@ async def on_message(message):
     for plugin in plugins_list:
         if plugin.trigger(message) == True:
             await plugin.action(message, client)
+            return
 
 @client.event
 async def on_ready():
