@@ -2,7 +2,7 @@ import discord
 from discord.ext import commands
 
 import snooplinks, hearthstone, frink
-plugins_list = [ snooplinks, frink, hearthstone ]
+plugins_list = [ snooplinks, frink, hearthstone]
 
 from config import client_key
 client = discord.Client()
