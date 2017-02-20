@@ -37,7 +37,7 @@ If you add quotation marks around your search, it will label the search with tho
 
 **Hearthstone Card Info**
 
-Type `[card name]` and get the picture of the Hearthstone card, and it's flavor text
+Type `[card name]` and get the picture of the Hearthstone card, and its flavor text.
 ![Hearthstone card information](http://i.imgur.com/eonISVO.png)
 
 **Snooplinks**
