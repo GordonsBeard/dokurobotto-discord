@@ -7,7 +7,7 @@ from config import channel_list as chans
 # Snooplinks
 # Only works in #meatspace / #bots
 # 1/5 chance of posting a video whenever 'weed' is mentioned.
-# 4/4 chance of emoji-replying with :weed: otherwise.
+# 4/5 chance of emoji-replying with :weed: otherwise.
 
 def trigger(message):
     message.content = message.content.lower()
