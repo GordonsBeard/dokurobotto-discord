@@ -9,6 +9,7 @@ from config import mashape_key
 # Hearthstone Card Identification
 # Condition: [search term]
 # Action: Returns info about the card, or < 10 search results.
+# Get an API key from https://market.mashape.com/omgvamp/hearthstone
 
 hearth_rx = re.compile('\[(.+?)\]')
 
