@@ -9,6 +9,8 @@ Setup
 
 2) Install the things listed in [requirements.txt](requirements.txt)
 
+2a) You'll need a copy of [frinkiac.py](https://github.com/GordonsBeard/frinkiac.py)
+
 3) Generate `config.py` with the following information:
 
 ```
