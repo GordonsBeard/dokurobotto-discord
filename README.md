@@ -3,13 +3,26 @@ Dokurobotto on Discord, now with fewer features!
 
 Setup
 ---
-1. Generate `config.py` with the following information:
+1. Make sure you're running Python 3.5+
+
+2. Install the things listed in [requirements.txt](requirements.txt)
+
+3. Generate `config.py` with the following information:
 
 ```
 client_key = '<your discord bot client key>'
 mashape_key = '<your mashape hearthstone key>'
 channel_list = {'#yourchan' : '<chanid>',}
 ```
+
+4. Modify `DRBot.py` to remove any plugins from the plugins_list you do not wish to use. (For instance, snooplinks will only work in specific channels on a specific server unless modified.)
+
+```
+import snooplinks, hearthstone, frink
+plugins_list = [ snooplinks, frink, hearthstone]
+```
+
+5. `python DRBot.py`
 
 Current Features
 ---
