@@ -37,10 +37,11 @@ If you add quotation marks around your search, it will label the search with tho
 
 **Hearthstone Card Info**
 
-Type `[card name]` and get the picture of the Hearthstone card, and it's flavor text
+Type `[card name]` and get the picture of the Hearthstone card, and its flavor text.
 ![Hearthstone card information](http://i.imgur.com/eonISVO.png)
 
 **Snooplinks**
+
 (a dumb joke for a dumb channel please do not judge)
 Type the word `weed` anywhere, and DR will respond with a :weed: emoji 16/20 times and a snooplink video the remainder of the time.
 ![Snooplinks at work](http://i.imgur.com/lFtLc78.png)
