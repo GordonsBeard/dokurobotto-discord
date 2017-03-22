@@ -19,7 +19,10 @@ try_agains = ['try more letters', 'type smarter words', 'how about a better set 
 
 # Comedy cards
 # Not actual cards but I want the bot to respond as if it was, jokes you see.
-comedy_cards = {'blood manos' : {'title': 'Blood Manos', 'url': 'http://i.imgur.com/a5fXYW4.png', 'source': 'http://imgur.com/a/IEUSR', 'color': 'orange'} }
+comedy_cards = {
+                'blood manos' : {'title': 'Blood Manos', 'url': 'http://i.imgur.com/a5fXYW4.png', 'source': 'http://imgur.com/a/IEUSR', 'color': 'Legendary'},
+                'kink banana' : {'title': 'Kink Banana', 'url': 'http://i.imgur.com/AML3T27.png', 'source': 'http://imgur.com/a/IEUSR', 'color': 'Common'},
+                }
 
 def trigger(message):
     query = re.search(hearth_rx, message.content.lower().strip())
@@ -98,15 +101,15 @@ def _random_gold(card):
     return image
 
 def _set_color(card):
-    if card == 'Free' or card == 'light_grey':
+    if card == 'Free':
         return Color.light_grey()
-    elif card == 'Common' or card == 'lighter_grey':
+    elif card == 'Common':
         return Color.lighter_grey()
-    elif card == 'Rare' or card == 'blue':
+    elif card == 'Rare':
         return Color.blue()
-    elif card == 'Epic' or card == 'purple':
+    elif card == 'Epic':
         return Color.purple()
-    elif card == 'Legendary' or card == 'orange':
+    elif card == 'Legendary':
         return Color.orange()
     else:
         return Color.default()
