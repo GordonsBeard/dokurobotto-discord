@@ -50,7 +50,7 @@ async def action(message, client):
         for card in results:
             if card['type'] not in ('Minion', 'Spell', 'Weapon') \
                     or card['cardSet'] in ('Debug', 'Tavern Brawl')  \
-                    or card['name'] in ('Jade Golem') \
+                    or card['name'] in ('Jade Golem'):
                     or 'flavor' not in card.keys():
                 cards_to_remove.append(card)
 
@@ -69,7 +69,7 @@ async def action(message, client):
 
         elif len(results) > 1 and len(results) < 10:
             for result_card in results:
-                if query.groups()[0].strip().lower() == result_card['name'].lower():
+                if query == result_card['name'].lower():
                     embed_message = Embed(title = result_card['name'],
                                           type = 'rich',
                                           url = 'http://www.hearthpwn.com/search?search={0}#t1:cards'.format(urllib.parse.quote_plus(result_card['name'])))
