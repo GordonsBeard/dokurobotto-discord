@@ -34,6 +34,7 @@ async def action(message, client):
     query = re.search(hearth_rx, message.content.lower().strip())
     query = query.groups()[0].strip()
 
+    # If there is a comedy card detected, stop it
     if query in comedy_cards.keys():
         embed_message = Embed(title = comedy_cards[query]['title'],
                               type = 'rich',
