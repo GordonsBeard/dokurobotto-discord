@@ -12,7 +12,7 @@ from config import channel_list as chans
 def trigger(message):
     message.content = message.content.lower()
     rx = re.compile('(wee+d)')
-    if re.search(rx, message.content.lower()) and message.channel.id in [chans['#meatspace'], chans['#bots']]:
+    if re.search(rx, message.content.lower()) and message.channel.id in [chans['#meatspace'], chans['#bots'], chans['#cafe-420']]:
         return True
 
 async def action(message, client):

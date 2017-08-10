@@ -49,7 +49,7 @@ async def action(message, client):
     if results:
         cards_to_remove = []
         for card in results:
-            if card['type'] not in ('Minion', 'Spell', 'Weapon') \
+            if card['type'] not in ('Minion', 'Spell', 'Weapon', 'Hero') \
                     or card['cardSet'] in ('Debug', 'Tavern Brawl')  \
                     or card['name'] in ('Jade Golem') \
                     or 'flavor' not in card.keys():
